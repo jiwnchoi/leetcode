@@ -13,7 +13,7 @@ class Solution:
                 (y, x-1)
             ]
             return [
-                (y, x) for y, x in candidates if is_position_valid(y, x)
+                (ny, nx) for ny, nx in candidates if is_position_valid(ny, nx)
             ]
 
         def dfs(y: int, x: int):
@@ -25,7 +25,6 @@ class Solution:
                 visited[y][x] = True   
 
                 neighbors = get_neighbors(y, x)
-                print(current, neighbors)
                 stack.extend(neighbors)
 
         n = 0
@@ -34,7 +33,7 @@ class Solution:
             for x in range(len(grid[0])):
                 if grid[y][x] == "0" or visited[y][x]:
                     continue
-                    
+
                 n += 1
                 dfs(y,x)
 
