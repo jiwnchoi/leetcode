@@ -1,0 +1,1 @@
+<h2>minimum-number-of-swaps-to-make-the-binary-string-alternating Notes</h2><hr>[ Time taken: 8 m 46 s ]
