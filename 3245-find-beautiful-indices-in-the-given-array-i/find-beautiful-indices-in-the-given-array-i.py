@@ -18,7 +18,6 @@ class Solution:
 
         for i in a_candi:
             x = bisect_left(b_candi, i)
-            print(x, len(a_candi), len(b_candi))
             if x > 0 and abs(b_candi[x-1] - i) <= k:
                 result.append(i)
             
