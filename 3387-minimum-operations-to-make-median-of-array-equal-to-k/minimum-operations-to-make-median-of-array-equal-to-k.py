@@ -7,8 +7,6 @@ class Solution:
         med_index = len(nums)// 2 
 
         x = bisect_left(nums, k)
-        
-
         med_value = nums[med_index]
 
         ans = 0
@@ -16,7 +14,6 @@ class Solution:
         end = max(x, med_index+1) 
         for i in range(start, end):
             ans += abs(nums[i] - k)
-            nums[i] -= (nums[i] - k)
         return ans
 
 
